@@ -1,36 +1,194 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# API Sentinel UI
+
+Frontend application for **API Sentinel**, a platform for monitoring API availability, uptime, and performance metrics.
+
+This project provides a modern dashboard for visualizing API status, response times, uptime statistics, and historical monitoring data.
+
+---
+
+## Features
+
+### Implemented
+
+#### Authentication
+
+* Login page
+* JWT authentication flow
+* Integration with NestJS backend
+* Token storage
+* Automatic redirection after login
+
+#### Frontend Infrastructure
+
+* Next.js 16
+* TypeScript
+* App Router
+* Tailwind CSS
+* Axios integration
+
+---
+
+## In Development
+
+* Dashboard
+* Monitor cards
+* Protected routes
+* Monitoring tables
+* Loading states
+* Statistics view
+
+---
+
+## Planned Features
+
+* Historical charts
+* Response time graphs
+* Uptime visualization
+* Monitor details page
+* Dark mode
+* Search and filters
+* Real-time updates
+* Notifications UI
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* Next.js 16
+* TypeScript
+* Tailwind CSS
+* Axios
+* React Query
+* Recharts
+* Lucide Icons
+
+### Backend
+
+API Sentinel Backend:
+
+* NestJS
+* Prisma ORM
+* PostgreSQL
+* Redis
+* JWT Authentication
+* Swagger
+
+---
+
+## Project Structure
+
+```text
+app/
+│
+├── login/
+│   └── page.tsx
+│
+├── dashboard/
+│   └── page.tsx
+│
+└── layout.tsx
+
+components/
+
+lib/
+├── api.ts
+├── auth.ts
+└── types.ts
+
+public/
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+```text
+User
+ │
+ ▼
+Login Page
+ │
+ ▼
+JWT Authentication
+ │
+ ▼
+Dashboard
+ │
+ ▼
+Monitors
+ │
+ ├── Status
+ ├── Uptime
+ ├── Response Time
+ └── History
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Roadmap
 
-## Deploy on Vercel
+### Phase 1 — Foundation ✅
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* [x] Next.js setup
+* [x] TypeScript
+* [x] Tailwind CSS
+* [x] Axios configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Phase 2 — Authentication ✅
+
+* [x] Login page
+* [x] JWT integration
+* [x] Backend communication
+* [x] Automatic redirect
+
+### Phase 3 — Dashboard 🚧
+
+* [ ] Dashboard layout
+* [ ] Monitor cards
+* [ ] Statistics cards
+* [ ] Table view
+
+### Phase 4 — Analytics
+
+* [ ] Uptime charts
+* [ ] Response time charts
+* [ ] Historical metrics
+
+### Phase 5 — UX Improvements
+
+* [ ] Dark mode
+* [ ] Search
+* [ ] Filters
+* [ ] Responsive design
+
+---
+
+## Current Status
+
+🚀 Active development
+
+The authentication flow is fully functional and integrated with the backend. The next milestone is building the dashboard and visual analytics experience.
