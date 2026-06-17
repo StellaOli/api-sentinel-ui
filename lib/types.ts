@@ -11,3 +11,10 @@ export interface Monitor {
 export interface LoginResponse {
   accessToken: string;
 }
+
+export interface Stats {
+  totalMonitors: number;
+  onlineMonitors: number;
+  offlineMonitors: number;
+  averageResponseTime: number;
+}
