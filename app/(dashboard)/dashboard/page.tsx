@@ -25,47 +25,43 @@ export default function Dashboard() {
     loadDashboard();
     }, []);
 
-  return (
-    <DashboardLayout>
-              <h1 className="text-3xl font-bold mb-8">
-        API Sentinel
-      </h1>
+return (
+  <>
+    <h1 className="text-3xl font-bold mb-8">
+      API Sentinel
+    </h1>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-
-    <StatCard
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <StatCard
         title="Total Monitors"
         value={stats?.totalMonitors ?? 0}
-    />
+      />
 
-    <StatCard
+      <StatCard
         title="Online"
         value={stats?.onlineMonitors ?? 0}
-    />
+      />
 
-    <StatCard
+      <StatCard
         title="Offline"
         value={stats?.offlineMonitors ?? 0}
-    />
+      />
 
-    <StatCard
+      <StatCard
         title="Avg Response"
         value={`${stats?.averageResponseTime ?? 0} ms`}
-    />
-
+      />
     </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {monitors.map((monitor) => (
-          <MonitorCard
-            key={monitor.id}
-            monitor={monitor}
-          />
-        ))}
-      </div>
-    
-  
-
-    </DashboardLayout>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {monitors.map((monitor) => (
+        <MonitorCard
+          key={monitor.id}
+          monitor={monitor}
+        />
+      ))}
+    </div>
+  </>
+);
      
-);}
+}
